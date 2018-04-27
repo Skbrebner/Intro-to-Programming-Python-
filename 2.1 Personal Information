@@ -1,0 +1,15 @@
+name = ( "Shane Brebner" )
+address = ( "Largo, FL, 33774" )
+telephoneNumber = 912 656 4896
+collegeMajor = ("Computer Programming")
+
+print ( name, address, telephoneNumber, collegeMajor )
+Write a program that displays the following information: 
+
+# Your name
+# Your Address, with city, state, and ZIP
+# Your tel phone number
+# Your College major 
+
+First create the different variables and give them. Store my "name" as a string in a name variable. 
+
