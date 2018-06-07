@@ -1,0 +1,143 @@
+#Chapt 5 in class lesson
+
+
+
+
+# functions_one.py
+# the 10 is the "arguement".
+# Weve got a function called square.
+# any code you want caled when you execute these functions need to be "tabbed"
+
+def main():
+    square(10)
+
+    number = int(input('Enter an integer '))
+    square(number)
+
+    num1 = int(input('Enter number to test '))
+    num2 = int(input('Enter desired multiple for test '))
+    
+    multiple(num2,num1) #calls the function
+        
+def square(num):
+
+    print(num,'squared is',num ** 2) # void type, arg is passed into parameter num
+    
+
+def multiple(mult,num):
+    if num % mult == 0:    # if the number is a multiple. The percent operator gives you a remainder after division.
+         print('yes',num,'is a multiple of',mult)
+         print('The other factor is',num /mult)
+    else:
+         print('No',num,'is not a multiple of',mult)   
+main()
+
+
+43 % 8  #% sign means "whats the remainder". 
+3
+#you can comment out entire regions by doing "format" then comment region. 
+
+
+
+
+
+
+
+
+#functions_two.py
+# were going to define two functions to find the area of a rectangle.
+#when a function returns a value, youve got to catch it in a variable. 
+
+def main():
+    s1 = float(input('Enter side 1 '))
+    s2 = float(input('Enter side 2 '))  # now, we should be able to use s1 and s2 to find area.
+    rect_area = area(s1,s2) #call area function and catch the return value in rect_area.
+                            #only known inside of the function. variables are only known where you decalre them. 
+    print('The area is',rect_area)
+
+def area(side1,side2):   #we want a value returning function 
+    area = side1 * side2   #these are the parameters were working with. 
+    return area 
+
+main()
+
+
+
+
+
+
+
+
+#functions_three.py
+# were going to define two functions to find the area of a rectangle.
+#when a function returns a value, youve got to catch it in a variable. 
+
+def main():
+    COST_OF_CARPET = 25.00 #when you name a constant, you do all upper case and with underscores. 
+    s1 = float(input('Enter side 1 of living room'))
+    s2 = float(input('Enter side 2 of living room'))
+    s3 = float(input('Enter side 1 of bed room'))
+    s4 = float(input('Enter side 2 of bed room'))  
+    living = area(s1,s2)
+    bed = area(s3,s4)
+    total = living + bed
+    cost = COST_OF_CARPET * total
+
+    print('Estimated carpet cost: $', format(cost,',.2f'), sep='') #
+    
+   
+
+def area(side1,side2):  
+    area = side1 * side2   
+    return area 
+
+main()
+
+
+##Enter side 1 of living room8
+##Enter side 2 of living room9
+##Enter side 1 of bed room13
+##Enter side 2 of bed room4
+##Estimated carpet cost: $3,100.00
+
+
+
+
+#functions_five.py
+# this iis going to be the executible program bc it has the main function. 
+
+
+import circles as c
+
+def main():
+    rad = float(input('Enter circle radius '))
+    area = c.area(rad)
+    print('The area is', format(area, '.3f'))
+
+    print('The circumference is', format(c.circum(rad)))
+    
+    
+main()
+
+
+
+
+#circles.py
+# This file does NOT Execute, it is only for IMPORTING
+# modules dont have main methods, they are used for importing. 
+
+
+import math as m  # well use this when we define our functions
+
+def area(radius):
+    return m.pi * radius ** 2      #value returning function
+    
+def circum(radius):
+    return m.pi * radius * 2        # value returning function
+
+
+
+
+
+
+
